@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test contact form</title>
+<style>body{font:18px/1.5 system-ui,sans-serif;max-width:30rem;margin:3rem auto;padding:0 1rem}
+label{display:block;margin-top:1rem;font-weight:600}input,textarea{width:100%;padding:.6rem;font:inherit;box-sizing:border-box}
+button{margin-top:1.4rem;padding:.7rem 1.4rem;font:inherit;font-weight:700;cursor:pointer}</style></head>
+<body>
+<h1>Contact us</h1>
+<form action="http://localhost:3000/submit" method="POST">
+  <!-- 1) Replace sf_320f8d81580eac36222429e98b948f08 with the key shown in your dashboard (starts with sf_) -->
+  <input type="hidden" name="apiKey" value="sf_320f8d81580eac36222429e98b948f08">
+  <!-- hidden bot trap: leave as is -->
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+  <label>Name <input type="text" name="name" required></label>
+  <label>Email <input type="email" name="email" required></label>
+  <label>Message <textarea name="message" rows="4" required></textarea></label>
+  <button type="submit">Send</button>
+</form>
+</body></html>
